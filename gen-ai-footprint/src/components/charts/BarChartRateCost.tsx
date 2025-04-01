@@ -15,7 +15,7 @@ interface Props {
     rate: number;
 }
 export default function BarChartRateCost({rate} : Props) {
-    let averagePrompts: number = 70/4;
+    const averagePrompts: number = 70/4;
 
     const chartData = [
         { user: "You", energy: 4*rate, water: 12.4*rate}, //energy is in WH and water is in mL

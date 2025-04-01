@@ -1,7 +1,7 @@
 import { ChatGPTWeeklyUsersLine } from "@/components/charts/USDailyFootprint/ChatGPTusersTime";
 import { EnergySourcesPie } from "@/components/charts/USDailyFootprint/USEnergySources";
 import { Projection2025Area } from "@/components/charts/USDailyFootprint/2025Projection";
-Projection2025Area
+//Projection2025Area
 export default function USDailyPage() {
   return (
     <div className="flex flex-col w-full px-2 md:px-5 gap-10">

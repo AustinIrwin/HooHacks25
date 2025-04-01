@@ -1,11 +1,10 @@
 "use client"
 
-import { TrendingUp } from "lucide-react"
 import { Label, PolarGrid, PolarRadiusAxis, RadialBar, RadialBarChart } from "recharts"
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { type ChartConfig, ChartContainer } from "@/components/ui/chart"
-const chartData = [{ phone: "iPhone-15", battery: 80, fill: "var(--color-iPhone-15)" }]
+//const chartData = [{ phone: "iPhone-15", battery: 80, fill: "var(--color-iPhone-15)" }]
 
 const chartConfig = {
   battery: {
@@ -22,7 +21,7 @@ interface Props {
 }
 export function PhoneChargeRadial({wH}: Props) {
 const phoneWH: number = 13;
-let charge: number = wH / phoneWH;
+const charge: number = wH / phoneWH;
 const chartData = [{ phone: "iPhone-15", battery: charge, fill: "var(--color-iPhone-15)" }]
 
   return (

@@ -54,8 +54,8 @@ export default function FootprintPage() {
     const estimatedFootprint = queries * 4 * baseMultiplier; // 4wH per query per day
     //setting bulbs being lighted up
     if (estimatedFootprint!=null){
-      let bulb_wH: number = 64/8;
-      let water_mL: number = 12.4
+      const bulb_wH: number = 64/8;
+      const water_mL: number = 12.4
       setBulbs(estimatedFootprint/bulb_wH);
       setWater(estimatedFootprint*water_mL);
     } else {
@@ -94,7 +94,7 @@ export default function FootprintPage() {
       </div>
 
       <div className="flex justify-between items-center w-full gap-4">
-        <label className="text-lg w-3/5">What's the average length/ complexity of your queries?</label>
+        <label className="text-lg w-3/5">What is the average length/ complexity of your queries?</label>
         <select
           value={complexity}
           onChange={(e) => setComplexity(e.target.value)}
