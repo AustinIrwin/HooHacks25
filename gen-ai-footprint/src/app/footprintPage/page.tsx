@@ -9,13 +9,11 @@ export default function FootprintPage() {
   const [serviceType, setServiceType] = useState("Text generation");
   const [complexity, setComplexity] = useState("Short (1-2 sentences)");
   const [result, setResult] = useState<string | null>(null);
-  const [warning, setWarning] = useState<string | null>(null);
+//  const [warning, setWarning] = useState<string | null>(null);
   const [resultNum, setNum] = useState<number | null>(null);
   const[water, setWater] = useState<number>(0);
   const[bulbs, setBulbs] = useState<number | null>(null);
   const queries = parseInt(queriesPerDay, 10);
-  const watts_per_query = 2.9;
-  const mliters_per_query = 10.6;
 
     // Scroll to top when the component is loaded
     useEffect(() => {
@@ -52,7 +50,7 @@ export default function FootprintPage() {
       baseMultiplier *= 1; //nothing changes
       //electricityMultiplier *= 1.5;
     }
-    setWarning(null);
+    //setWarning(null);
     const estimatedFootprint = queries * 4 * baseMultiplier; // 4wH per query per day
     //setting bulbs being lighted up
     if (estimatedFootprint!=null){
